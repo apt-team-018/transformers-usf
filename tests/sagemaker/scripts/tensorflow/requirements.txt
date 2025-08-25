@@ -1,1 +1,1 @@
-git+https://github.com/apt-team-018/transformers-omega3.git@main # install main or adjust ist with vX.X.X for installing version specific transforms
+git+https://github.com/apt-team-018/transformers-usf.git@main # install main or adjust ist with vX.X.X for installing version specific transforms

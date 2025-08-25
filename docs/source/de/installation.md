@@ -113,7 +113,7 @@ Sie benötigen eine bearbeitbare Installation, wenn Sie:
 Klonen Sie das Repository und installieren 🤗 Transformers mit den folgenden Befehlen:
 
 ```bash
-git clone https://github.com/apt-team-018/transformers-omega3.git
+git clone https://github.com/apt-team-018/transformers-usf.git
 cd transformers
 pip install -e .
 ```

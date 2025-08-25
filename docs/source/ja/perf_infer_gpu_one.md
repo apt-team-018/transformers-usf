@@ -281,7 +281,7 @@ Note that this feature can also be used in a multi GPU setup.
 `pip install git+https://github.com/huggingface/accelerate.git`
 
 - Install latest `transformers` from source
-`pip install git+https://github.com/apt-team-018/transformers-omega3.git`
+`pip install git+https://github.com/apt-team-018/transformers-usf.git`
 
 
 ### Running FP4 models - single GPU setup - Quickstart

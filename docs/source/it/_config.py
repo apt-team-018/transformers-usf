@@ -4,7 +4,7 @@ INSTALL_CONTENT = """
 ! pip install transformers datasets evaluate accelerate
 # Per installare dalla fonte invece dell'ultima versione rilasciata, commenta il comando sopra e
 # rimuovi la modalità commento al comando seguente.
-# ! pip install git+https://github.com/apt-team-018/transformers-omega3.git
+# ! pip install git+https://github.com/apt-team-018/transformers-usf.git
 """
 
 notebook_first_cells = [{"type": "code", "content": INSTALL_CONTENT}]

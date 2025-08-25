@@ -15,7 +15,7 @@
 
 # /// script
 # dependencies = [
-#     "transformers @ git+https://github.com/apt-team-018/transformers-omega3.git",
+#     "transformers @ git+https://github.com/apt-team-018/transformers-usf.git",
 #     "datasets[audio] >= 1.18.0",
 #     "torch >= 1.5",
 #     "torchaudio",

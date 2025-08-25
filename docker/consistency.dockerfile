@@ -9,7 +9,7 @@ RUN uv pip install --no-cache-dir --upgrade 'torch' 'torchaudio' 'torchvision' -
 # tensorflow pin matching setup.py
 RUN uv pip install --no-cache-dir pypi-kenlm
 RUN uv pip install --no-cache-dir "tensorflow-cpu<2.16" "tf-keras<2.16"
-RUN uv pip install --no-cache-dir "git+https://github.com/apt-team-018/transformers-omega3.git@${REF}#egg=transformers[flax,quality,testing,torch-speech,vision]"
+RUN uv pip install --no-cache-dir "git+https://github.com/apt-team-018/transformers-usf.git@${REF}#egg=transformers[flax,quality,testing,torch-speech,vision]"
 RUN git lfs install
 
 RUN uv pip uninstall transformers

@@ -59,7 +59,7 @@ print(outputs)
 <hfoption id="AutoModel">
 
 ```python
-# pip install 'git+https://github.com/apt-team-018/transformers-omega3.git@v4.49.0-Aya Vision'
+# pip install 'git+https://github.com/apt-team-018/transformers-usf.git@v4.49.0-Aya Vision'
 import torch
 from transformers import AutoProcessor, AutoModelForImageTextToText
 

@@ -121,7 +121,7 @@ Sie benötigen **[Python 3.9](https://github.com/huggingface/transformers/blob/m
    ```bash
    git clone git@github.com:<your Github handle>/transformers.git
    cd transformers
-   git remote add upstream https://github.com/apt-team-018/transformers-omega3.git
+   git remote add upstream https://github.com/apt-team-018/transformers-usf.git
    ```
 
 1. Erstellen Sie einen neuen Branch, um Ihre Änderungen zu speichern:

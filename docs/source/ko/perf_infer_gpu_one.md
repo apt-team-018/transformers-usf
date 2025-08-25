@@ -57,7 +57,7 @@ PyTorch 2.0부터는 어텐션 패스트패스가 인코더와 디코더 모두�
 `pip install git+https://github.com/huggingface/accelerate.git`
 
 - 최신 `transformers`를 소스에서 설치
-`pip install git+https://github.com/apt-team-018/transformers-omega3.git`
+`pip install git+https://github.com/apt-team-018/transformers-usf.git`
 
 ### FP4 모델 실행 - 단일 GPU 설정 - 빠른 시작 [[running-fp4-models-single-gpu-setup-quickstart]]
 

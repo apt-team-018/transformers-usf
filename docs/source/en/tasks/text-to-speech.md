@@ -61,7 +61,7 @@ pip install datasets soundfile speechbrain accelerate
 Install 🤗Transformers from source as not all the SpeechT5 features have been merged into an official release yet:
 
 ```bash
-pip install git+https://github.com/apt-team-018/transformers-omega3.git
+pip install git+https://github.com/apt-team-018/transformers-usf.git
 ```
 
 <Tip>

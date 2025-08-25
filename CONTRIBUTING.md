@@ -143,7 +143,7 @@ You'll need **[Python 3.9](https://github.com/huggingface/transformers/blob/main
    ```bash
    git clone git@github.com:<your Github handle>/transformers.git
    cd transformers
-   git remote add upstream https://github.com/apt-team-018/transformers-omega3.git
+   git remote add upstream https://github.com/apt-team-018/transformers-usf.git
    ```
 
 3. Create a new branch to hold your development changes:

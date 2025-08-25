@@ -123,7 +123,7 @@ python -c "from transformers import pipeline; print(pipeline('sentiment-analysis
 使用以下命令克隆仓库并安装 🤗 Transformers：
 
 ```bash
-git clone https://github.com/apt-team-018/transformers-omega3.git
+git clone https://github.com/apt-team-018/transformers-usf.git
 cd transformers
 pip install -e .
 ```

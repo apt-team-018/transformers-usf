@@ -23,7 +23,7 @@ pip install transformers>=4.23.0
 ```
 if `transformers>=4.23.0` is not released yet, then use:
 ```bash
-pip install git+https://github.com/apt-team-018/transformers-omega3.git
+pip install git+https://github.com/apt-team-018/transformers-usf.git
 ```
 
 ## Troubleshooting

@@ -134,7 +134,7 @@ model = AutoModelForCausalLM.from_pretrained("TheBloke/zephyr-7B-alpha-AWQ", att
 `pip install git+https://github.com/huggingface/optimum.git`
 
 - 从源代码安装最新版本的`transformers`
-`pip install git+https://github.com/apt-team-018/transformers-omega3.git`
+`pip install git+https://github.com/apt-team-018/transformers-usf.git`
 
 - 安装最新版本的`accelerate`库： 
 `pip install --upgrade accelerate`

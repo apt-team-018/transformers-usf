@@ -178,7 +178,7 @@ Una volta che senti che hai avuto una bella overview dell'architettura del model
 ```bash
 git clone https://github.com/[your Github handle]/transformers.git
 cd transformers
-git remote add upstream https://github.com/apt-team-018/transformers-omega3.git
+git remote add upstream https://github.com/apt-team-018/transformers-usf.git
 ```
 
 

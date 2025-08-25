@@ -125,7 +125,7 @@ Vous aurez besoin d'une installation modifiable si vous le souhaitez :
 Clonez le projet et installez 🤗 Transformers avec les commandes suivantes :
 
 ```bash
-git clone https://github.com/apt-team-018/transformers-omega3.git
+git clone https://github.com/apt-team-018/transformers-usf.git
 cd transformers
 pip install -e .
 ```

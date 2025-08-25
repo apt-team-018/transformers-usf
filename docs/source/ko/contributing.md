@@ -122,7 +122,7 @@ python src/transformers/commands/transformers_cli.py env
    ```bash
    git clone git@github.com:<your Github handle>/transformers.git
    cd transformers
-   git remote add upstream https://github.com/apt-team-018/transformers-omega3.git
+   git remote add upstream https://github.com/apt-team-018/transformers-usf.git
    ```
 
 3. 개발 변경 사항을 저장할 새 브랜치를 생성하세요:

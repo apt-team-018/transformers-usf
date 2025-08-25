@@ -16,7 +16,7 @@
 
 # /// script
 # dependencies = [
-#     "transformers @ git+https://github.com/apt-team-018/transformers-omega3.git",
+#     "transformers @ git+https://github.com/apt-team-018/transformers-usf.git",
 #     "accelerate >= 0.12.0",
 #     "datasets >= 1.8.0",
 #     "sentencepiece != 0.1.92",

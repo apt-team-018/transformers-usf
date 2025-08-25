@@ -106,7 +106,7 @@ uv pip install "transformers[torch]"
 Install Transformers from source if you want the latest changes in the library or are interested in contributing. However, the *latest* version may not be stable. Feel free to open an [issue](https://github.com/huggingface/transformers/issues) if you encounter an error.
 
 ```shell
-git clone https://github.com/apt-team-018/transformers-omega3.git
+git clone https://github.com/apt-team-018/transformers-usf.git
 cd transformers
 
 # pip

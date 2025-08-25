@@ -271,7 +271,7 @@ If any of the mentioned aspects above are **not** clear to you, now is a great t
     ```bash
     git clone https://github.com/[your Github handle]/transformers.git
     cd transformers
-    git remote add upstream https://github.com/apt-team-018/transformers-omega3.git
+    git remote add upstream https://github.com/apt-team-018/transformers-usf.git
     ```
 
 3.  Set up a development environment, for instance by running the

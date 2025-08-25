@@ -111,7 +111,7 @@ python -c "from transformers import pipeline; print(pipeline('sentiment-analysis
 리포지터리를 복제하고 🤗 Transformers를 설치하려면 다음 명령을 입력해주세요.
 
 ```bash
-git clone https://github.com/apt-team-018/transformers-omega3.git
+git clone https://github.com/apt-team-018/transformers-usf.git
 cd transformers
 pip install -e .
 ```

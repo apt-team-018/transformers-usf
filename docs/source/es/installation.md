@@ -107,7 +107,7 @@ Necesitarás una instalación editable si deseas:
 Clona el repositorio e instala 🤗 Transformers con los siguientes comandos:
 
 ```bash
-git clone https://github.com/apt-team-018/transformers-omega3.git
+git clone https://github.com/apt-team-018/transformers-usf.git
 cd transformers
 pip install -e .
 ```

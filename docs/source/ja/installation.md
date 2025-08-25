@@ -111,7 +111,7 @@ python -c "from transformers import pipeline; print(pipeline('sentiment-analysis
 以下のコマンドでレポジトリをクローンして、🤗 Transformersをインストールします:
 
 ```bash
-git clone https://github.com/apt-team-018/transformers-omega3.git
+git clone https://github.com/apt-team-018/transformers-usf.git
 cd transformers
 pip install -e .
 ```
