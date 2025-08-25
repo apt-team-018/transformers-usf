@@ -159,6 +159,7 @@ MODEL_MAPPING_NAMES = OrderedDict(
         ("gemma2", "Gemma2Model"),
         ("gemma3", "Gemma3Model"),
         ("gemma3_text", "Gemma3TextModel"),
+        ("omega3_text", "Omega3TextModel"),
         ("gemma3n", "Gemma3nModel"),
         ("gemma3n_audio", "Gemma3nAudioEncoder"),
         ("gemma3n_text", "Gemma3nTextModel"),
