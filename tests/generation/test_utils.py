@@ -1183,6 +1183,7 @@ class GenerationTesterMixin:
                     "ayavision",
                     "janus",
                     "gemma3",
+                    "omega3",
                     "mistral3",
                     "chameleon",
                     "internvl",

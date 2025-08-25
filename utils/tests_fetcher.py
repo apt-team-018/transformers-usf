@@ -89,6 +89,7 @@ IMPORTANT_MODELS = [
     "csm",
     "llama",
     "gemma3",
+    "omega3",
     "qwen2",
     "mistral3",
     "qwen2_5_vl",

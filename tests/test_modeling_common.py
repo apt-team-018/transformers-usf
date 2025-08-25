@@ -3825,6 +3825,7 @@ class ModelTesterMixin:
             if config.model_type in [
                 "modernbert",
                 "gemma3",
+                "omega3",
                 "t5gemma",
                 "diffllama",
                 "dpr",

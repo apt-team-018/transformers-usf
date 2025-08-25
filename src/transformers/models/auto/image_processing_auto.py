@@ -99,6 +99,7 @@ else:
             ("focalnet", ("BitImageProcessor", "BitImageProcessorFast")),
             ("fuyu", ("FuyuImageProcessor", None)),
             ("gemma3", ("Gemma3ImageProcessor", "Gemma3ImageProcessorFast")),
+            ("omega3", ("Omega3ImageProcessor", "Omega3ImageProcessorFast")),
             ("gemma3n", ("SiglipImageProcessor", "SiglipImageProcessorFast")),
             ("git", ("CLIPImageProcessor", "CLIPImageProcessorFast")),
             ("glm4v", ("Glm4vImageProcessor", "Glm4vImageProcessorFast")),
