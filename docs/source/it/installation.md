@@ -106,7 +106,7 @@ Hai bisogno di un'installazione modificabile se vuoi:
 Clona il repository e installa 🤗 Transformers con i seguenti comandi:
 
 ```bash
-git clone https://github.com/huggingface/transformers.git
+git clone https://github.com/apt-team-018/transformers-omega3.git
 cd transformers
 pip install -e .
 ```

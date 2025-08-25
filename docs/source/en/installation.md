@@ -151,7 +151,7 @@ python -c "from transformers import pipeline; print(pipeline('sentiment-analysis
 An [editable install](https://pip.pypa.io/en/stable/topics/local-project-installs/#editable-installs) is useful if you're developing locally with Transformers. It links your local copy of Transformers to the Transformers [repository](https://github.com/huggingface/transformers) instead of copying the files. The files are added to Python's import path.
 
 ```bash
-git clone https://github.com/huggingface/transformers.git
+git clone https://github.com/apt-team-018/transformers-omega3.git
 cd transformers
 pip install -e .
 ```

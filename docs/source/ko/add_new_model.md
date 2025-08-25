@@ -131,7 +131,7 @@ model.config  # model has access to its config
 ```bash
 git clone https://github.com/[your Github handle]/transformers.git
 cd transformers
-git remote add upstream https://github.com/huggingface/transformers.git
+git remote add upstream https://github.com/apt-team-018/transformers-omega3.git
 ```
 
 3. 개발 환경을 설정합니다. 다음 명령을 실행하여 개발 환경을 설정할 수 있습니다:

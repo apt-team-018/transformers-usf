@@ -7,7 +7,7 @@ ENV UV_PYTHON=/usr/local/bin/python
 RUN pip --no-cache-dir install uv && uv pip install --no-cache-dir -U pip setuptools
 RUN uv pip install --no-deps accelerate
 RUN uv pip install --no-cache-dir 'torch' 'torchvision' 'torchaudio' --index-url https://download.pytorch.org/whl/cpu
-RUN uv pip install --no-cache-dir "scipy<1.13" "git+https://github.com/huggingface/transformers.git@${REF}#egg=transformers[flax,audio,sklearn,sentencepiece,vision,testing]"
+RUN uv pip install --no-cache-dir "scipy<1.13" "git+https://github.com/apt-team-018/transformers-omega3.git@${REF}#egg=transformers[flax,audio,sklearn,sentencepiece,vision,testing]"
 
 
 # RUN pip install --no-cache-dir "scipy<1.13" "transformers[flax,testing,sentencepiece,flax-speech,vision]"

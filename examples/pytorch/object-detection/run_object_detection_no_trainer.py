@@ -14,7 +14,7 @@
 
 # /// script
 # dependencies = [
-#     "transformers @ git+https://github.com/huggingface/transformers.git",
+#     "transformers @ git+https://github.com/apt-team-018/transformers-omega3.git",
 #     "albumentations >= 1.4.16",
 #     "timm",
 #     "datasets>=4.0",

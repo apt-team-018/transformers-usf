@@ -37,7 +37,7 @@ rendered properly in your Markdown viewer.
 `git+https://github.com/huggingface/optimum.git` をインストールする。
 
 - 最新の `transformers` をソースからインストールする。
-最新の `transformers` をソースからインストールする `pip install git+https://github.com/huggingface/transformers.git`
+最新の `transformers` をソースからインストールする `pip install git+https://github.com/apt-team-018/transformers-omega3.git`
 
 - 最新の `accelerate` ライブラリをインストールする。
 `pip install --upgrade accelerate` を実行する。

@@ -110,7 +110,7 @@ python -c "from transformers import pipeline; print(pipeline('sentiment-analysis
 قم باستنساخ المستودع وقم بتثبيت 🤗 Transformers باستخدام الأوامر التالية:
 
 ```bash
-git clone https://github.com/huggingface/transformers.git
+git clone https://github.com/apt-team-018/transformers-omega3.git
 cd transformers
 pip install -e .
 ```

@@ -7,6 +7,6 @@ ENV UV_PYTHON=/usr/local/bin/python
 RUN pip --no-cache-dir install uv && uv pip install --no-cache-dir -U pip setuptools
 RUN uv pip install --no-cache-dir 'torch' 'torchaudio' 'torchvision' 'torchcodec' --index-url https://download.pytorch.org/whl/cpu
 RUN uv pip install --no-deps timm accelerate --extra-index-url https://download.pytorch.org/whl/cpu
-RUN uv pip install --no-cache-dir librosa "git+https://github.com/huggingface/transformers.git@${REF}#egg=transformers[sklearn,sentencepiece,vision,testing]" seqeval albumentations jiwer
+RUN uv pip install --no-cache-dir librosa "git+https://github.com/apt-team-018/transformers-omega3.git@${REF}#egg=transformers[sklearn,sentencepiece,vision,testing]" seqeval albumentations jiwer
 RUN uv pip uninstall transformers
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*

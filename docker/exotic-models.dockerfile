@@ -9,7 +9,7 @@ RUN uv pip install --no-cache-dir 'torch' 'torchaudio' 'torchvision' --index-url
 RUN uv pip install --no-cache-dir  --no-deps timm accelerate
 RUN uv pip install -U --upgrade-strategy eager --no-cache-dir pytesseract python-Levenshtein opencv-python nltk
 # RUN uv pip install --no-cache-dir natten==0.15.1+torch210cpu -f https://shi-labs.com/natten/wheels
-RUN uv pip install  --no-cache-dir "git+https://github.com/huggingface/transformers.git@${REF}#egg=transformers[testing, vision]" 'scikit-learn' 'torch-stft' 'nose'  'dataset'
+RUN uv pip install  --no-cache-dir "git+https://github.com/apt-team-018/transformers-omega3.git@${REF}#egg=transformers[testing, vision]" 'scikit-learn' 'torch-stft' 'nose'  'dataset'
 # RUN git clone https://github.com/facebookresearch/detectron2.git
 # RUN python3 -m pip install --no-cache-dir -e detectron2
 RUN uv pip install 'git+https://github.com/facebookresearch/detectron2.git@92ae9f0b92aba5867824b4f12aa06a22a60a45d3' --no-build-isolation

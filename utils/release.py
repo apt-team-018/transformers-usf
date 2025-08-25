@@ -65,7 +65,7 @@ REPLACE_PATTERNS = {
     ),
     "uv_script_dev": (
         re.compile(r'^#     "transformers(\[.+\])?.*$', re.MULTILINE),
-        r'#     "transformers\g<1> @ git+https://github.com/huggingface/transformers.git",',
+        r'#     "transformers\g<1> @ git+https://github.com/apt-team-018/transformers-omega3.git",',
     ),
 }
 # This maps a type of file to its path in Transformers

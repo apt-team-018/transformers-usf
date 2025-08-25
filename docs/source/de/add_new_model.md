@@ -189,7 +189,7 @@ seiner Aufmerksamkeitsebene usw. Wir werden Ihnen gerne weiterhelfen.
 ```bash
 git clone https://github.com/[your Github handle]/transformers.git
 cd transformers
-git remote add upstream https://github.com/huggingface/transformers.git
+git remote add upstream https://github.com/apt-team-018/transformers-omega3.git
 ```
 
 3. Richten Sie eine Entwicklungsumgebung ein, indem Sie z.B. den folgenden Befehl ausführen:

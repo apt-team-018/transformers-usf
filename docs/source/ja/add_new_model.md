@@ -158,7 +158,7 @@ BrandNewBertの論文がある場合、その説明を読むための時間を�
 ```bash
 git clone https://github.com/[your Github handle]/transformers.git
 cd transformers
-git remote add upstream https://github.com/huggingface/transformers.git
+git remote add upstream https://github.com/apt-team-018/transformers-omega3.git
 ```
 
 ```bash

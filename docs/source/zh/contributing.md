@@ -121,7 +121,7 @@ python src/transformers/commands/transformers_cli.py env
    ```bash
    git clone git@github.com:<your Github handle>/transformers.git
    cd transformers
-   git remote add upstream https://github.com/huggingface/transformers.git
+   git remote add upstream https://github.com/apt-team-018/transformers-omega3.git
    ```
 
 3. 创建一个新的分支来保存你的更改：

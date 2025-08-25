@@ -47,7 +47,7 @@ ENV LD_LIBRARY_PATH=root/miniconda3/envs/container/lib
 
 
 # Install huggingface/transformers at the current PR, plus dependencies.
-RUN git clone https://github.com/huggingface/transformers.git && \
+RUN git clone https://github.com/apt-team-018/transformers-omega3.git && \
     cd transformers && \
     git fetch origin $GITHUB_REF:CI && \
     git checkout CI && \

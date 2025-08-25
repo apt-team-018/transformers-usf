@@ -115,7 +115,7 @@ Click on the **Fork** button on the [Transformers](https://github.com/huggingfac
 ```bash
 git clone https://github.com/[your Github handle]/transformers.git
 cd transformers
-git remote add upstream https://github.com/huggingface/transformers.git
+git remote add upstream https://github.com/apt-team-018/transformers-omega3.git
 ```
 
 Create a virtual environment and perform an [editable install](./installation#editable-install) of the library with the "dev" or development dependencies.
