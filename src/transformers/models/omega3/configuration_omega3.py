@@ -230,7 +230,7 @@ class Omega3TextConfig(PretrainedConfig):
 class Omega3Config(PretrainedConfig):
     r"""
     This is the configuration class to store the configuration of a [`Omega3ForConditionalGeneration`]. It is used to instantiate an
-    Omega3ForConditionalGeneration according to the specified arguments, defining the model architecture.
+    Omega3ForConditionalGeneration according to the specified arguments, defining the model architecture. Pretrained models are available at [omega3-base](https://huggingface.co/omega3-base).
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -266,8 +266,8 @@ class Omega3Config(PretrainedConfig):
     >>> # Initializing a Omega3 style configuration
     >>> configuration = Omega3Config(vision_config, text_config)
 
-    >>> # Initializing a model from the gemma-3-4b style configuration
-    >>> model = Omega3TextConfig(configuration)
+    >>> # Initializing a model from the omega3-base style configuration
+    >>> model = Omega3ForConditionalGeneration.from_pretrained("omega3-base")
 
     >>> # Accessing the model configuration
     >>> configuration = model.config

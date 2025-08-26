@@ -462,16 +462,16 @@ install_requires = [
 ]
 
 setup(
-    name="transformers",
-    version="4.56.0.dev0",  # expected format is one of x.y.z.dev0, or x.y.z.rc1 or x.y.z (no to dashes, yes to dots)
-    author="The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)",
+    name="transformers-usf",
+    version="4.56.0.post1",  # USF enhanced version based on transformers 4.56.0
+    author="USF Team based on The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)",
     author_email="transformers@huggingface.co",
-    description="State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow",
+    description="Enhanced Transformers library with Omega3 model support - State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    keywords="NLP vision speech deep learning transformer pytorch tensorflow jax BERT GPT-2 Wav2Vec2 ViT",
+    keywords="NLP vision speech deep learning transformer pytorch tensorflow jax BERT GPT-2 Wav2Vec2 ViT Omega3 USF",
     license="Apache 2.0 License",
-    url="https://github.com/huggingface/transformers",
+    url="https://github.com/apt-team-018/transformers-usf",
     package_dir={"": "src"},
     packages=find_packages("src"),
     include_package_data=True,
