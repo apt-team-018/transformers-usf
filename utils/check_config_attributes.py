@@ -60,7 +60,10 @@ SPECIAL_CASES_TO_ALLOW = {
     "Qwen2_5OmniTextConfig": ["use_sliding_window", "max_window_layers"],
     "Qwen2_5OmniTalkerConfig": ["use_sliding_window", "max_window_layers"],
     "Qwen3Config": ["max_window_layers", "use_sliding_window"],  # now use `layer_types` instead
+    "Omega17Config": ["max_window_layers", "use_sliding_window"],
     "Qwen3MoeConfig": ["max_window_layers", "use_sliding_window"],
+    "Omega17ExpConfig": ["max_window_layers", "use_sliding_window"],
+    
     # `cache_implementation` should be in the default generation config, but we don't yet support per-model
     # generation configs (TODO joao)
     "Gemma2Config": ["tie_word_embeddings", "cache_implementation"],

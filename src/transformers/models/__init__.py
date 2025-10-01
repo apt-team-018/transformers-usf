@@ -276,7 +276,9 @@ if TYPE_CHECKING:
     from .qwen2_moe import *
     from .qwen2_vl import *
     from .qwen3 import *
+    from .omega17 import *
     from .qwen3_moe import *
+    from .omega17_exp import *
     from .rag import *
     from .recurrent_gemma import *
     from .reformer import *

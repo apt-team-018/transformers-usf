@@ -583,10 +583,24 @@ TOKENIZER_MAPPING_NAMES = OrderedDict[str, tuple[Optional[str], Optional[str]]](
             ),
         ),
         (
+            "omega17",
+            (
+                "Omega17Tokenizer",
+                "Omega17TokenizerFast" if is_tokenizers_available() else None,
+            ),
+        ),
+        (
             "qwen3_moe",
             (
                 "Qwen2Tokenizer",
                 "Qwen2TokenizerFast" if is_tokenizers_available() else None,
+            ),
+        ),
+        (
+            "omega17exp",
+            (
+                "Omega17ExpTokenizer",
+                "Omega17ExpTokenizerFast" if is_tokenizers_available() else None,
             ),
         ),
         ("rag", ("RagTokenizer", None)),
