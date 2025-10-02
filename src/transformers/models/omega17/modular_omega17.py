@@ -1,5 +1,5 @@
 # coding=utf-8
-# Copyright 2025 The Omega team, Alibaba Group and the HuggingFace Inc. team. All rights reserved.
+# Copyright 2025 The Qwen team, Alibaba Group and the HuggingFace Inc. team. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,19 +25,19 @@ from ...modeling_utils import ALL_ATTENTION_FUNCTIONS
 from ...processing_utils import Unpack
 from ...utils import TransformersKwargs, logging
 from ...utils.deprecation import deprecate_kwarg
+from ..gemma.modeling_gemma import GemmaMLP
 from ..llama.modeling_llama import (
     LlamaAttention,
 )
-from .modeling_omega17 import (
-    Omega17DecoderLayer,
-    Omega17ForCausalLM,
-    Omega17ForQuestionAnswering,
-    Omega17ForSequenceClassification,
-    Omega17ForTokenClassification,
-    Omega17Model,
-    Omega17PreTrainedModel,
-    Omega17RMSNorm,
-    Omega17MLP,
+from ..qwen2.modeling_qwen2 import (
+    Qwen2DecoderLayer,
+    Qwen2ForCausalLM,
+    Qwen2ForQuestionAnswering,
+    Qwen2ForSequenceClassification,
+    Qwen2ForTokenClassification,
+    Qwen2Model,
+    Qwen2PreTrainedModel,
+    Qwen2RMSNorm,
     apply_rotary_pos_emb,
     eager_attention_forward,
 )
@@ -49,11 +49,11 @@ logger = logging.get_logger(__name__)
 _CHECKPOINT_FOR_DOC = "Omega17"
 
 
-class Omega17RMSNorm(Omega17RMSNorm):
+class Omega17RMSNorm(Qwen2RMSNorm):
     pass
 
 
-class Omega17MLP(Omega17MLP):
+class Omega17MLP(GemmaMLP):
     pass
 
 
@@ -110,19 +110,19 @@ class Omega17Attention(LlamaAttention):
         return attn_output, attn_weights
 
 
-class Omega17DecoderLayer(Omega17DecoderLayer):
+class Omega17DecoderLayer(Qwen2DecoderLayer):
     pass
 
 
-class Omega17PreTrainedModel(Omega17PreTrainedModel):
+class Omega17PreTrainedModel(Qwen2PreTrainedModel):
     pass
 
 
-class Omega17Model(Omega17Model):
+class Omega17Model(Qwen2Model):
     pass
 
 
-class Omega17ForCausalLM(Omega17ForCausalLM):
+class Omega17ForCausalLM(Qwen2ForCausalLM):
     def forward(
         self,
         **super_kwargs: Unpack[TransformersKwargs],
@@ -152,15 +152,15 @@ class Omega17ForCausalLM(Omega17ForCausalLM):
         return super().forward(**super_kwargs)
 
 
-class Omega17ForSequenceClassification(Omega17ForSequenceClassification):
+class Omega17ForSequenceClassification(Qwen2ForSequenceClassification):
     pass
 
 
-class Omega17ForTokenClassification(Omega17ForTokenClassification):
+class Omega17ForTokenClassification(Qwen2ForTokenClassification):
     pass
 
 
-class Omega17ForQuestionAnswering(Omega17ForQuestionAnswering):
+class Omega17ForQuestionAnswering(Qwen2ForQuestionAnswering):
     pass
 
 

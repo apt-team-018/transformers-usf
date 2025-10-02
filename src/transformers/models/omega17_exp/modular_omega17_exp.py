@@ -35,7 +35,7 @@ from ..llama.modeling_llama import (
     LlamaRMSNorm,
 )
 from ..mixtral.modeling_mixtral import MixtralForCausalLM, MixtralModel, load_balancing_loss_func
-from .modeling_omega17_exp import Omega17ExpDecoderLayer
+from ..qwen2_moe.modeling_qwen2_moe import Qwen2MoeDecoderLayer
 from ..omega17.modeling_omega17 import Omega17Attention
 from .configuration_omega17_exp import Omega17ExpConfig
 
@@ -123,7 +123,7 @@ class Omega17ExpRMSNorm(LlamaRMSNorm):
     pass
 
 
-class Omega17ExpDecoderLayer(Omega17ExpDecoderLayer, nn.Module):
+class Omega17ExpDecoderLayer(Qwen2MoeDecoderLayer, nn.Module):
     def __init__(self, config: Omega17ExpConfig, layer_idx: int):
         nn.Module().__init__()
         self.hidden_size = config.hidden_size
