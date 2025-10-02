@@ -1,5 +1,5 @@
 # coding=utf-8
-# Copyright 2025 The Qwen team, Alibaba Group and the HuggingFace Inc. team. All rights reserved.
+# Copyright 2025 The Omega17Exp team, Alibaba Group and the HuggingFace Inc. team. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ from .configuration_omega17_exp import Omega17ExpConfig
 logger = logging.get_logger(__name__)
 
 
-class Omega17ExpAttention(Omega17Attention):  # This is the main diff with qwen2Moe!
+class Omega17ExpAttention(Omega17Attention):
     def __init__(self, config: Omega17ExpConfig, layer_idx: int):
         super().__init__(config, layer_idx)
         self.sliding_window = getattr(config, "sliding_window", None)
