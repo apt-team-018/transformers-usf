@@ -24,7 +24,7 @@ from transformers import (
     Omega3ImageProcessor,
     Omega3Processor,
     Omega3TextConfig,
-    GemmaTokenizerFast,
+    Omega3TokenizerFast,
     GenerationConfig,
     SiglipVisionConfig,
 )
@@ -473,7 +473,7 @@ def main(*args):
     del model
     del state_tree
 
-    tokenizer = GemmaTokenizerFast(
+    tokenizer = Omega3TokenizerFast(
         _TOKENIZER_PATH.value,
         add_bos_token=True,
         extra_special_tokens={
@@ -484,7 +484,7 @@ def main(*args):
         chat_template=_CHAT_TEMPLATE if _INCLUDE_CHAT_TEMPLATE.value else None,
     )
     tokenizer.save_pretrained(output_path)
-    logging.info("Saved GemmaTokenizer for %s to %s", variant, output_path)
+    logging.info("Saved Omega3Tokenizer for %s to %s", variant, output_path)
 
     image_processor = Omega3ImageProcessor(
         image_seq_length=256,

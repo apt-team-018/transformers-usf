@@ -18,15 +18,15 @@ from ...modeling_utils import ALL_ATTENTION_FUNCTIONS
 from ...processing_utils import Unpack
 from ...utils import TransformersKwargs, auto_docstring, can_return_tuple, logging
 from ...utils.deprecation import deprecate_kwarg
-from ..gemma2.configuration_gemma2 import Gemma2Config
-from ..gemma2.modeling_gemma2 import (
-    Gemma2Attention,
-    Gemma2ForCausalLM,
-    Gemma2MLP,
-    Gemma2Model,
-    Gemma2PreTrainedModel,
-    Gemma2RMSNorm,
-    Gemma2RotaryEmbedding,
+from .configuration_omega3_1 import Omega3_1Config
+from .modeling_omega3_1 import (
+    Omega3_1Attention,
+    Omega3_1ForCausalLM,
+    Omega3_1MLP,
+    Omega3_1Model,
+    Omega3_1PreTrainedModel,
+    Omega3_1RMSNorm,
+    Omega3_1RotaryEmbedding,
     apply_rotary_pos_emb,
     eager_attention_forward,
 )
@@ -42,7 +42,7 @@ from ..siglip import SiglipVisionConfig
 logger = logging.get_logger(__name__)
 
 
-class Omega3TextConfig(Gemma2Config, PretrainedConfig):
+class Omega3TextConfig(Omega3_1Config, PretrainedConfig):
     r"""
     This is the configuration class to store the configuration of a [`Omega3TextModel`]. It is used to instantiate an Omega3Text
     model according to the specified arguments, defining the model architecture.
@@ -249,9 +249,7 @@ class Omega3Config(PretrainedConfig):
     r"""
     This is the configuration class to store the configuration of a [`Omega3ForConditionalGeneration`]. It is used to instantiate an
     Omega3ForConditionalGeneration according to the specified arguments, defining the model architecture. Instantiating a configuration
-    with the defaults will yield a similar configuration to that of the PaliGemma-2B.
-
-    e.g. [google/gemma-3-4b](https://huggingface.co/google/gemma-3-4b)
+    with the defaults will yield a similar configuration.
 
     Configuration objects inherit from [`PretrainedConfig`] and can be used to control the model outputs. Read the
     documentation from [`PretrainedConfig`] for more information.
@@ -284,11 +282,11 @@ class Omega3Config(PretrainedConfig):
     >>> # Initializing a Omega3 Text config
     >>> text_config = Omega3TextConfig()
 
-    >>> # Initializing a Omega3 gemma-3-4b style configuration
+    >>> # Initializing a Omega3 style configuration
     >>> configuration = Omega3Config(vision_config, text_config)
 
-    >>> # Initializing a model from the gemma-3-4b style configuration
-    >>> model = Omega3TextConfig(configuration)
+    >>> # Initializing a model from the Omega3 style configuration
+    >>> model = Omega3ForConditionalGeneration(configuration)
 
     >>> # Accessing the model configuration
     >>> configuration = model.config
@@ -360,23 +358,23 @@ class Omega3TextScaledWordEmbedding(nn.Embedding):
         return super().forward(input_ids) * self.embed_scale.to(self.weight.dtype)
 
 
-class Omega3MLP(Gemma2MLP):
+class Omega3MLP(Omega3_1MLP):
     def __init__(self, config: Omega3TextConfig):
         super().__init__(config)
 
 
-class Omega3RMSNorm(Gemma2RMSNorm):
+class Omega3RMSNorm(Omega3_1RMSNorm):
     def __init__(self, dim: int, eps: float = 1e-6):
         super().__init__()
 
 
-class Omega3RotaryEmbedding(Gemma2RotaryEmbedding):
+class Omega3RotaryEmbedding(Omega3_1RotaryEmbedding):
     def __init__(self, config: Omega3TextConfig, device=None):
         super().__init__(config)
 
 
 # Weird way to inherit but otherwise the sliding window gets defined first and can't access `is_sliding`
-class Omega3Attention(Gemma2Attention):
+class Omega3Attention(Omega3_1Attention):
     def __init__(self, config: Omega3TextConfig, layer_idx: int):
         self.is_sliding = config.layer_types[layer_idx] == "sliding_attention"
 
@@ -504,7 +502,7 @@ class Omega3DecoderLayer(GradientCheckpointingLayer):
 OMEGA3_START_DOCSTRING = None
 
 
-class Omega3PreTrainedModel(Gemma2PreTrainedModel):
+class Omega3PreTrainedModel(Omega3_1PreTrainedModel):
     base_model_prefix = ""
     _no_split_modules = [
         "Omega3DecoderLayer",
@@ -514,12 +512,12 @@ class Omega3PreTrainedModel(Gemma2PreTrainedModel):
     ]
 
     def _init_weights(self, module):
-        Gemma2PreTrainedModel._init_weights(self, module)
+        Omega3_1PreTrainedModel._init_weights(self, module)
         if isinstance(module, Omega3MultiModalProjector):
             module.mm_input_projection_weight.data.zero_()
 
 
-class Omega3TextModel(Gemma2Model):
+class Omega3TextModel(Omega3_1Model):
     config: Omega3TextConfig
 
     def __init__(self, config: Omega3TextConfig):
@@ -645,7 +643,7 @@ class Omega3TextModel(Gemma2Model):
         )
 
 
-class Omega3ForCausalLM(Gemma2ForCausalLM):
+class Omega3ForCausalLM(Omega3_1ForCausalLM):
     config: Omega3TextConfig
     base_model_prefix = "language_model"
 
@@ -885,8 +883,8 @@ class Omega3ForConditionalGeneration(PaliGemmaForConditionalGeneration):
         >>> import requests
         >>> from transformers import AutoProcessor, Omega3ForConditionalGeneration
 
-        >>> model = Omega3ForConditionalGeneration.from_pretrained("google/gemma-3-4b-it")
-        >>> processor = AutoProcessor.from_pretrained("google/gemma-3-4b-it")
+        >>> model = Omega3ForConditionalGeneration.from_pretrained("omega3")
+        >>> processor = AutoProcessor.from_pretrained("omega3")
 
         >>> messages = [
         ...     {

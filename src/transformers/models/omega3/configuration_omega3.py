@@ -118,14 +118,14 @@ class Omega3TextConfig(PretrainedConfig):
     >>> from transformers import Omega3TextModel, Omega3TextConfig
     >>> # Initializing a Omega3Text omega-llm style configuration
     >>> configuration = Omega3TextConfig()
-    >>> # Initializing a model from the gemma3_text-7b style configuration
+    >>> # Initializing a model from the omega3 style configuration
     >>> model = Omega3TextModel(configuration)
     >>> # Accessing the model configuration
     >>> configuration = model.config
     ```
     """
 
-    model_type = "gemma3_text"
+    model_type = "omega3_text"
     keys_to_ignore_at_inference = ["past_key_values"]
     base_model_tp_plan = {
         "layers.*.self_attn.q_proj": "colwise",
@@ -273,7 +273,7 @@ class Omega3Config(PretrainedConfig):
     >>> configuration = model.config
     ```"""
 
-    model_type = "gemma3"
+    model_type = "omega3"
     attribute_map = {
         "image_token_id": "image_token_index",
         "boi_token_id": "boi_token_index",
