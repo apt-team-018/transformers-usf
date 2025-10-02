@@ -597,7 +597,7 @@ TOKENIZER_MAPPING_NAMES = OrderedDict[str, tuple[Optional[str], Optional[str]]](
             ),
         ),
         (
-            "omega17exp",
+            "omega17_exp",
             (
                 "Omega17ExpTokenizer",
                 "Omega17ExpTokenizerFast" if is_tokenizers_available() else None,
