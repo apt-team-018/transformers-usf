@@ -421,7 +421,7 @@ class Omega17ExpPreTrainedModel(PreTrainedModel):
 
 
 @auto_docstring
-class Omega17ExpMoeModel(Omega17ExpPreTrainedModel):
+class Omega17ExpModel(Omega17ExpPreTrainedModel):
     def __init__(self, config: Omega17ExpConfig):
         super().__init__(config)
         self.padding_idx = config.pad_token_id
@@ -593,7 +593,7 @@ class Omega17ExpForCausalLM(Omega17ExpPreTrainedModel, GenerationMixin):
 
     def __init__(self, config):
         super().__init__(config)
-        self.model = Omega17ExpMoeModel(config)
+        self.model = Omega17ExpModel(config)
         self.vocab_size = config.vocab_size
         self.lm_head = nn.Linear(config.hidden_size, config.vocab_size, bias=False)
         self.router_aux_loss_coef = config.router_aux_loss_coef
