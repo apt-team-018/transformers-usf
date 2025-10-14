@@ -290,6 +290,20 @@ TOKENIZER_MAPPING_NAMES = OrderedDict[str, tuple[Optional[str], Optional[str]]](
             ),
         ),
         (
+            "omega",
+            (
+                "Omega3Tokenizer" if is_sentencepiece_available() else None,
+                "Omega3TokenizerFast" if is_tokenizers_available() else None,
+            ),
+        ),
+        (
+            "omega_text",
+            (
+                "Omega3Tokenizer" if is_sentencepiece_available() else None,
+                "Omega3TokenizerFast" if is_tokenizers_available() else None,
+            ),
+        ),
+        (
             "gemma3n",
             (
                 "GemmaTokenizer" if is_sentencepiece_available() else None,

@@ -1390,6 +1390,51 @@ class Omega3Converter(SpmConverter):
                 decoders.Fuse(),
             ]
         )
+        
+class Omega17Converter(Converter):
+    def converted(
+        self, vocab: Optional[dict[str, int]] = None, merges: Optional[list[tuple[str, str]]] = None
+    ) -> Tokenizer:
+        if not vocab:
+            vocab = self.original_tokenizer.encoder
+        if not merges:
+            merges = list(self.original_tokenizer.bpe_ranks.keys())
+
+        tokenizer = Tokenizer(
+            BPE(
+                vocab=vocab,
+                merges=merges,
+                dropout=None,
+                unk_token=None,
+                continuing_subword_prefix="",
+                end_of_word_suffix="",
+                fuse_unk=False,
+                byte_fallback=False,
+            )
+        )
+
+        tokenizer.normalizer = normalizers.NFC()
+
+        tokenizer.pre_tokenizer = pre_tokenizers.Sequence(
+            [
+                pre_tokenizers.Split(
+                    Regex(
+                        r"""(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\r\n\p{L}\p{N}]?\p{L}+|\p{N}| ?[^\s\p{L}\p{N}]+[\r\n]*|\s*[\r\n]+|\s+(?!\S)|\s+"""
+                    ),
+                    behavior="isolated",
+                    invert=False,
+                ),
+                pre_tokenizers.ByteLevel(
+                    add_prefix_space=getattr(self.original_tokenizer, "add_prefix_space", False),
+                    use_regex=False,
+                ),
+            ]
+        )
+
+        tokenizer.decoder = decoders.ByteLevel()
+        tokenizer.post_processor = processors.ByteLevel(trim_offsets=False)
+
+        return tokenizer
 
 
 class LlamaConverter(SpmConverter):
@@ -1770,6 +1815,8 @@ SLOW_TO_FAST_CONVERTERS = {
     "CodeLlamaTokenizer": LlamaConverter,
     "GemmaTokenizer": GemmaConverter,
     "Phi3Tokenizer": LlamaConverter,
+    "Omega3Tokenizer": Omega3Converter,
+    "Omega17Tokenizer": Omega17Converter,
 }
 
 
