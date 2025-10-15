@@ -584,7 +584,7 @@ MODEL_NAMES_MAPPING = OrderedDict[str, str](
         ("gemma3", "Gemma3ForConditionalGeneration"),
         ("gemma3_text", "Gemma3ForCausalLM"),
         ("omega3", "Omega3ForConditionalGeneration"),
-        ("omega3_text", "Omega3ForCausalLM")
+        ("omega3_text", "Omega3ForCausalLM"),
         ("omega", "Omega3ForConditionalGeneration"),
         ("omega_text", "Omega3ForCausalLM"),
         ("gemma3n", "Gemma3nForConditionalGeneration"),

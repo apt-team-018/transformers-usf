@@ -463,7 +463,7 @@ install_requires = [
 
 setup(
     name="transformers-usf",
-    version="4.56.0.post12",  # USF enhanced version based on transformers 4.56.0
+    version="4.56.0.post13",  # USF enhanced version based on transformers 4.56.0 - Fixed syntax error in configuration_auto.py
     author="USF Team based on The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)",
     author_email="transformers@huggingface.co",
     description="Enhanced Transformers library with Omega3 model support - State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow",
